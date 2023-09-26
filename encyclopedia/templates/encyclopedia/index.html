@@ -13,7 +13,7 @@ This is blocknav!
 
 <ul>
     {% for entry in entries %}
-    <li>{{ entry }}</li>
+    <li><a href="{% url 'encyclopedia:get_entry' title=entry %}">{{entry}}</a></li>
     {% empty %}
     <li>No Encyclopedia.</li>
     {% endfor %}
