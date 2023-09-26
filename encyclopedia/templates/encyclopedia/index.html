@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block nav %}
+This is blocknav!
+{% endblock %}
+
+{% block body %}
+<h1>All Pages</h1>
+
+<ul>
+    {% for entry in entries %}
+    <li>{{ entry }}</li>
+    {% empty %}
+    <li>No Encyclopedia.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
